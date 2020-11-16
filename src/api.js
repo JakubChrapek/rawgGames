@@ -32,4 +32,12 @@ getCurrentMonth();
 // POPULAR GAMES
 const POPULAR_GAMES = `games?dates=${lastYearDate},${currentDate}&ordering=-rating&page_size=10`;
 
+// UPCOMING GAMES
+const UPCOMING_GAMES = `games?dates=${currentDate},${nextYearDate}&ordering=-added&page_size=10`;
+
+// NEW GAMES
+const NEW_GAMES = `games?dates=${lastYearDate},${currentDate}&ordering=-released&page_size=10`;
+
 export const popularGamesURL = () => `${API_URL}${POPULAR_GAMES}`;
+export const upcomingGamesURL = () => `${API_URL}${UPCOMING_GAMES}`;
+export const newGamesURL = () => `${API_URL}${NEW_GAMES}`;
